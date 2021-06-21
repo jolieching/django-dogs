@@ -1,0 +1,5 @@
+--- # basic greeting
+- model: pets.pet
+  fields:
+    name: hello, world!
+

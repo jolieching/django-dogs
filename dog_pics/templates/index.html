@@ -1,0 +1,19 @@
+<div>
+{% if pet_list %}
+    <ul>
+    {% for pet in pet_list %}
+        <li>
+          {{ pet.name }}
+          <img src="{{pet.image.url}}" style="width: 25%; height:auto"/>
+
+          <span><a href="{% url 'pets:update' pet.id %}">edit</a></span>
+          <span><a href="{% url 'pets:delete' pet.id %}">delete</a></span>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No pets are available.</p>
+{% endif %}
+<br>
+<a href="{% url 'pets:create' %}">Upload a New Pet</a>
+</div>

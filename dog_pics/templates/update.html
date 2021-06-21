@@ -1,0 +1,6 @@
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update">
+    <!-- why does this page break if I add pet.id instead of pets.id? -->
+    <a href="{% url 'pets:delete' pets.id %}">delete</a>
+</form>
