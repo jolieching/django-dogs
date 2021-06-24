@@ -1,5 +1,6 @@
 --- # basic greeting
-- model: pets.pet
+- model: dog_pics.Pets
   fields:
     name: hello, world!
+    image: images/lily.jpg
 
